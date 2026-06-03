@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Campo à Mesa - Receitas Rurais Autênticas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER/NAVEGAÇÃO -->
+    <header class="navbar">
+        <nav class="nav-container">
+            <div class="logo">🌾 Do Campo à Mesa</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#receitas">Receitas</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <section id="inicio" class="banner">
+        <div class="banner-content">
+            <h1>Do Campo à Mesa</h1>
+            <p class="banner-subtitle">Receitas autênticas com ingredientes frescos do campo</p>
+            <a href="#receitas" class="cta-button">Descobrir Receitas</a>
+        </div>
+    </section>
+
+    <!-- SOBRE O SITE -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Bem-vindo ao Nosso Espaço</h2>
+            <p class="sobre-text">
+                Em "Do Campo à Mesa", celebramos a simplicidade e autenticidade da culinária rural. 
+                Aqui você encontrará receitas tradicionais preparadas com ingredientes frescos colhidos 
+                diretamente do campo - sem processamento industrial, sem conservantes, apenas o melhor 
+                que a natureza pode oferecer.
+            </p>
+            <p class="sobre-text">
+                Nossas receitas resgatam sabores antigos e técnicas culinárias passadas de geração em geração, 
+                trazendo para sua mesa o verdadeiro gosto do campo. Desde bolos caseiros até pratos salgados 
+                tradicionais, tudo preparado com amor e ingredientes de qualidade.
+            </p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE RECEITAS -->
+    <section id="receitas" class="receitas-section">
+        <div class="container">
+            <h2>Nossas Receitas</h2>
+            
+            <!-- ABAS DE CATEGORIA -->
+            <div class="categoria-tabs">
+                <button class="tab-btn active" onclick="mostrarCategoria('doces')">🍰 Doces</button>
+                <button class="tab-btn" onclick="mostrarCategoria('salgados')">🍲 Salgados</button>
+            </div>
+
+            <!-- CATEGORIA DOCES -->
+            <div id="doces" class="categoria-content active">
+                <div class="receitas-grid">
+                    <div class="receita-card" onclick="abrirReceita(1)">
+                        <div class="receita-imagem bolo-milho"></div>
+                        <h3>Bolo de Milho</h3>
+                        <p>Clássico caseiro com milho fresco</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(2)">
+                        <div class="receita-imagem bolo-banana"></div>
+                        <h3>Bolo de Banana com Canela</h3>
+                        <p>Macio e saboroso</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(3)">
+                        <div class="receita-imagem broa-milho"></div>
+                        <h3>Broa de Milho</h3>
+                        <p>Receita tradicional e rústica</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(4)">
+                        <div class="receita-imagem bolo-abobora"></div>
+                        <h3>Bolo de Abóbora</h3>
+                        <p>Doce e nutritivo</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(5)">
+                        <div class="receita-imagem pa-queijo"></div>
+                        <h3>Pão de Queijo Caseiro</h3>
+                        <p>Crocante e saboroso</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(6)">
+                        <div class="receita-imagem bolo-mel"></div>
+                        <h3>Bolo de Mel e Milho</h3>
+                        <p>Adoçado com mel natural</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CATEGORIA SALGADOS -->
+            <div id="salgados" class="categoria-content">
+                <div class="receitas-grid">
+                    <div class="receita-card" onclick="abrirReceita(7)">
+                        <div class="receita-imagem polenta"></div>
+                        <h3>Polenta Cremosa</h3>
+                        <p>Clássico salgado do campo</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(8)">
+                        <div class="receita-imagem massa-tomate"></div>
+                        <h3>Massa Caseira com Tomate</h3>
+                        <p>Fresca e saudável</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(9)">
+                        <div class="receita-imagem pao-milho"></div>
+                        <h3>Pão de Milho</h3>
+                        <p>Integral e nutritivo</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(10)">
+                        <div class="receita-imagem feijao"></div>
+                        <h3>Feijão à Moda Antiga</h3>
+                        <p>Receita tradicional</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(11)">
+                        <div class="receita-imagem caldo"></div>
+                        <h3>Caldo de Abóbora e Milho</h3>
+                        <p>Quente e reconfortante</p>
+                    </div>
+                    <div class="receita-card" onclick="abrirReceita(12)">
+                        <div class="receita-imagem milho-verde"></div>
+                        <h3>Milho Verde com Manteiga</h3>
+                        <p>Simples e delicioso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE BENEFÍCIOS -->
+    <section id="beneficios" class="beneficios">
+        <div class="container">
+            <h2>Por Que Receitas Caseiras e Naturais?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">🥗</div>
+                    <h3>Saúde Garantida</h3>
+                    <p>Sem conservantes, corantes artificiais ou produtos industrializados. Apenas ingredientes naturais que seu corpo reconhece e aproveita.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">🌱</div>
+                    <h3>Nutrientes Preservados</h3>
+                    <p>Ingredientes frescos mantêm todos os nutrientes, vitaminas e minerais essenciais para a saúde da sua família.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">💪</div>
+                    <h3>Mais Energia</h3>
+                    <p>Alimentos naturais e caseiros fornecem energia duradoura, sem os picos e quedas causados por alimentos industrializados.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">❤️</div>
+                    <h3>Amor em Cada Receita</h3>
+                    <p>Cozinhar em casa é um ato de amor. Cada refeição preparada com cuidado cria momentos especiais em família.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">🌍</div>
+                    <h3>Sustentabilidade</h3>
+                    <p>Produtos do campo, sem embalagens excessivas e processos industriais. Melhor para você e para o planeta.</p>
+                </div>
+                <div class="beneficio-card">
+                    <div class="beneficio-icone">👨‍🍳</div>
+                    <h3>Sabor Autêntico</h3>
+                    <p>O verdadeiro sabor das coisas. Sem additivos químicos, apenas o gosto puro dos ingredientes frescos do campo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE RECEITA -->
+    <div id="receita-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharReceita()">&times;</span>
+            <div id="receita-detalhes"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Do Campo à Mesa - Receitas Rurais Autênticas. Feito com ❤️ para você.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
